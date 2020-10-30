@@ -35,16 +35,16 @@ namespace CateringVisualizer
             var order = new CateringOrderPostModel()
             {
                 UserId = 1,
-                ChefId = 2,
-                Date = new DateTime(2021, 01, 27),
-                NumberOfPeople = 35,
-                Outdoors = false,
-                Address = "13 Elm Street"
+                ChefId = 3,
+                Date = new DateTime(2021, 03, 14),
+                NumberOfPeople = 36,
+                Outdoors = true,
+                Address = "35 Jason Ave"
             };
 
             var newOrder = orderController.CreateCateringOrder(order);
-            Console.WriteLine(newOrder.Address);
-            Console.WriteLine(orderController.GetById(8).User.FullName);
+            Console.WriteLine(newOrder.Id);
+            Console.WriteLine(orderController.GetById(newOrder.Id).User.FullName);
         }
     }
 }
