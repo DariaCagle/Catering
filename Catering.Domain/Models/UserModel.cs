@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace Catering.Data.Models
+namespace Catering.Domain.Models
 {
-    public class User
+    public class UserModel
     {
         public int Id { get; set; }
         public string FullName { get; set; }
         public string Phone { get; set; }
-        public virtual ICollection<CateringOrder> CateringOrders { get; set; }
+        public ICollection<CateringOrderModel> CateringOrders { get; set; }
     }
 }

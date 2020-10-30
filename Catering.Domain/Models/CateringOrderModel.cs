@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Catering.Data.Models
+namespace Catering.Domain.Models
 {
-    public class CateringOrder
+    public class CateringOrderModel
     {
         public int Id { get; set; }
         public int UserId { get; set; }
@@ -11,7 +11,7 @@ namespace Catering.Data.Models
         public int NumberOfPeople { get; set; }
         public bool Outdoors { get; set; }
         public string Address { get; set; }
-        public virtual User User { get; set; }
-        public virtual Chef Chef { get; set; }
+        public UserModel User { get; set; }
+        public ChefModel Chef { get; set; }
     }
 }

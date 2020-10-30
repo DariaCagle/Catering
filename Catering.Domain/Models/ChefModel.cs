@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace Catering.Data.Models
+namespace Catering.Domain.Models
 {
-    public class Chef
+    public class ChefModel
     {
         public int Id { get; set; }
         public string FullName { get; set; }
         public string ChefType { get; set; }
-        public virtual ICollection<CateringOrder> CateringOrders { get; set; }
+        public ICollection<CateringOrderModel> CateringOrders { get; set; }
     }
 }
